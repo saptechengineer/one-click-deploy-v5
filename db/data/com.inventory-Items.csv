@@ -1,0 +1,6 @@
+id,name,description,quantity,unit,category,location,minStock,supplier_id
+1a2b3c4d-5e6f-7g8h-9i0j-k1l2m3n4o5p6,Laptop XPS 15,High-performance laptop with 32GB RAM,25,pieces,Electronics,Warehouse A,10,3b94a6c1-ff6b-4b87-8d89-e7c49c12e35b
+2b3c4d5e-6f7g-8h9i-0j1k-l2m3n4o5p6q7,Office Chair,Ergonomic office chair with lumbar support,50,pieces,Furniture,Warehouse B,15,9e2f4d8a-cc3d-4e26-7d1a-f9c56b4g3h2i
+3c4d5e6f-7g8h-9i0j-1k2l-m3n4o5p6q7r8,Wireless Mouse,Bluetooth wireless mouse with precision tracking,100,pieces,Accessories,Warehouse A,30,7d1e3c8f-aa2b-4f15-b6c9-d8b45a3f2e1d
+4d5e6f7g-8h9i-0j1k-2l3m-n4o5p6q7r8s9,Monitor 27",27-inch 4K LED monitor,30,pieces,Electronics,Warehouse A,8,3b94a6c1-ff6b-4b87-8d89-e7c49c12e35b
+5e6f7g8h-9i0j-1k2l-3m4n-o5p6q7r8s9t0,Desk Lamp,LED desk lamp with adjustable brightness,75,pieces,Accessories,Warehouse B,20,9e2f4d8a-cc3d-4e26-7d1a-f9c56b4g3h2i

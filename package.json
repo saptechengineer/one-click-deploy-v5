@@ -1,0 +1,25 @@
+{
+  "name": "inventory-app",
+  "version": "1.0.0",
+  "description": "Inventory Management System",
+  "private": true,
+  "dependencies": {
+    "@sap/cds": "^6",
+    "express": "^4"
+  },
+  "devDependencies": {
+    "sqlite3": "^5.0.4"
+  },
+  "scripts": {
+    "start": "cds run",
+    "watch": "cds watch",
+    "deploy": "cds deploy"
+  },
+  "cds": {
+    "requires": {
+      "db": {
+        "kind": "sqlite"
+      }
+    }
+  }
+}

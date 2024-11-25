@@ -1,0 +1,104 @@
+{
+  "_version": "1.49.0",
+  "sap.app": {
+    "id": "com.inventory",
+    "type": "application",
+    "title": "Inventory Management",
+    "description": "Inventory Management System",
+    "dataSources": {
+      "mainService": {
+        "uri": "/inventory/",
+        "type": "OData",
+        "settings": {
+          "odataVersion": "4.0"
+        }
+      }
+    }
+  },
+  "sap.ui5": {
+    "dependencies": {
+      "minUI5Version": "1.109.3",
+      "libs": {
+        "sap.fe.templates": {}
+      }
+    },
+    "models": {
+      "": {
+        "dataSource": "mainService",
+        "settings": {
+          "synchronizationMode": "None",
+          "operationMode": "Server",
+          "autoExpandSelect": true
+        }
+      }
+    },
+    "routing": {
+      "routes": [
+        {
+          "pattern": ":?query:",
+          "name": "ItemsList",
+          "target": "ItemsList"
+        },
+        {
+          "pattern": "Items({key}):?query:",
+          "name": "ItemsDetail",
+          "target": "ItemsDetail"
+        },
+        {
+          "pattern": "Suppliers:?query:",
+          "name": "SuppliersList",
+          "target": "SuppliersList"
+        },
+        {
+          "pattern": "Suppliers({key}):?query:",
+          "name": "SuppliersDetail",
+          "target": "SuppliersDetail"
+        }
+      ],
+      "targets": {
+        "ItemsList": {
+          "type": "Component",
+          "id": "ItemsList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "entitySet": "Items",
+              "initialLoad": true
+            }
+          }
+        },
+        "ItemsDetail": {
+          "type": "Component",
+          "id": "ItemsDetail",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "entitySet": "Items"
+            }
+          }
+        },
+        "SuppliersList": {
+          "type": "Component",
+          "id": "SuppliersList",
+          "name": "sap.fe.templates.ListReport",
+          "options": {
+            "settings": {
+              "entitySet": "Suppliers",
+              "initialLoad": true
+            }
+          }
+        },
+        "SuppliersDetail": {
+          "type": "Component",
+          "id": "SuppliersDetail",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "entitySet": "Suppliers"
+            }
+          }
+        }
+      }
+    }
+  }
+}
